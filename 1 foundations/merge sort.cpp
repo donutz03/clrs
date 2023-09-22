@@ -26,7 +26,13 @@ merge(a,p,q,r)
     k=k+1
   
 
-
+merge-sort(a,p,r)
+    if p>=r
+      return
+    q=[(p+r)/2]
+    merge-sort(a,p,q)
+    merge-sort(a,q+1,r)
+    merge(a,p,q,r)
 
 
 
