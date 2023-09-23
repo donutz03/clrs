@@ -25,7 +25,38 @@ max-heapify(a,i)
     for i=floor(n/2) downto 1
       max-heapify(a,i)
 
+heapsort(a,n)
+  build-max-heap(a,n)
+  for i=n downto 2
+    exchange a[1] with a[i]
+    a.heap-size=a.heap-size-1
+    max-heapify(a,1)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
