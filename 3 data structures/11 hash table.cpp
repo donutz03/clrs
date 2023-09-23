@@ -15,3 +15,5 @@ chained-hash-search(t,k)
 
 chained-hash-delete(t,x)
   list-delete(t[h(key)],x)
+
+  keys are integers, vectors or strings
