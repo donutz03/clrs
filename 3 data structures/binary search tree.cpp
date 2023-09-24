@@ -62,7 +62,19 @@ transplant(t,u,v)
   if v!=nil
     v.p=u.p
 
-
+left-rotate(t,x)
+  y=x.right
+  x.right=y.left
+  if y.left!=t.nil
+    y.left.p=x
+  y.p=x.p
+  if x.p==t.nil
+    t.root=y
+  elseif x==x.p.left
+    x.p.left=y
+  else x.p.right=y
+  y.left=x
+  x.p=y
 
 
 
