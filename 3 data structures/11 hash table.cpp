@@ -59,7 +59,18 @@ q=b
 for i=1 to u
 return q mod m
 
-
+tree-delete(t,z)
+if z.left==nil
+  transplant(t,z,z.right)
+elseif z.right==nil
+  transplant(t,z,z.left)
+else y=tree-minimum(z.right)
+  if y!=z.right
+    transplant(t,y,y.right)
+    y.right=z.right
+    y.right.p=y
+    y.left=z.left
+    y.left.p=y
 
 
 
